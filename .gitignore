@@ -1,0 +1,6 @@
+/.venv
+/*.csv
+/*.txt
+/headers.json
+/messages
+/target

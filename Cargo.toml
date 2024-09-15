@@ -1,0 +1,18 @@
+[package]
+name = "chad"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+fs_extra = "1.2"
+tui = "0.19.0"
+crossterm = "0.28.1"
+chrono = "0.4.38"
+csv = "1.3.0"
+signal-hook = "0.3.17"
+
+[[bin]]
+name = "chad"
+path = "src/main.rs"
