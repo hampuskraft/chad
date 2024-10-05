@@ -179,8 +179,10 @@ fn draw_ui<B: Backend>(
 				)| {
 					let indicator = if *selected { "[x]" } else { "[ ]" };
 
-					let truncated_name = if channel_name.len() > max_name_length {
-						format!("{}...", &channel_name[..max_name_length - 3])
+					let truncated_name = if channel_name.chars().count() > max_name_length {
+						let truncated: String =
+							channel_name.chars().take(max_name_length - 3).collect();
+						format!("{}...", truncated)
 					} else {
 						channel_name.clone()
 					};
